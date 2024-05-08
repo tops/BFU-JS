@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+
+    </div>
+    <script>
+
+        function clear(){
+            document.getElementById("box").innerHTML = "";
+        }
+
+        function print(text){
+            document.getElementById("box").innerHTML += text;
+        }
+
+        let namn = "Tobias";
+        namn = "Anna";
+
+        let x = 10.5;
+        let y = 2; 
+
+        x -= y;
+
+        let admin = true; 
+
+        let nummer = [1, 2, 3, 7, 9, 10, 11, 30];
+
+        let person = {namn: "Tobias", ort: "Uppsala"};
+        document.getElementById("box").innerHTML = person.ort;
+
+        if(y < 3){
+            document.getElementById("box").innerHTML = "mindre än 3";
+        }else if(y < 5){
+            document.getElementById("box").innerHTML = "mindre än 5";
+        }else{
+            document.getElementById("box").innerHTML = "stort tal";
+        }
+
+        clear();
+        for(let i=100; i>=0; i--){
+            print(i + " ");
+        }
+
+        clear();
+        let j = 0;
+        while(j <= 100){
+            print(j + " ");
+            j++;
+        }
+
+        clear();
+        for(let a of nummer){
+            print(a + " ");
+        }
+
+
+        function sum(a, b){
+            return a+b;
+        }
+
+        clear();
+        let summa = sum(100, 50);
+        print(summa);
+
+    </script>
+</body>
+</html>

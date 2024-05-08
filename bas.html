@@ -1,0 +1,62 @@
+<html>
+<head>
+    <style>
+    body {
+        background: #333;
+    }
+    #output {
+        width: 500px;
+        height: 500px;
+        background: #eee;
+        border: 10px solid #555;
+        border-radius: 5px;;
+        margin: 40px auto;
+        padding: 15px;
+        font-family: monospace;
+        white-space: pre;
+    }
+    </style>   
+</head>
+<body>
+    <input id="rows" value="10" onclick="print_pine()">
+<div id="output"></div>
+<script>
+    // Skriv koden här //
+/*
+    let rows = 10;
+    let stars = "*";
+    for(let i=1; i <= rows; i++){
+        print(stars);
+        stars += "*";
+        newLine();
+    }
+    clear();
+    */
+print_pine();
+
+   function print_pine(){
+    clear();
+    let rows = document.getElementById("rows").value;
+    for(let row=1; row <= rows; row++){
+        for(let stars=1; stars <= row; stars++){
+            print("*");
+        }
+        newLine(); 
+    }
+   }
+    
+    // Färdiga funktioner som förenklar //
+    function print(text){
+        document.getElementById("output").innerHTML += text;
+    }
+
+    function newLine(){
+        document.getElementById("output").innerHTML += "\n";
+    }
+
+    function clear(){
+        document.getElementById("output").innerHTML = "";
+    }
+</script>
+</body>
+</html>
